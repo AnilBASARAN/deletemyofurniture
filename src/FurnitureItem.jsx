@@ -19,8 +19,8 @@ const FurnitureItem = (props) => {
 
         <div className=" flex justify-end">
         <button
-          onClick={()=>{
-            FurnitureServices.deleteFurniture(furniture.id);
+          onClick={ async ()=>{
+            await FurnitureServices.deleteFurniture(furniture.id);
             fetchFurnitures();
           }}
           className="bg-red-400 text-red-200 px-2 py-1 rounded-lg" >
